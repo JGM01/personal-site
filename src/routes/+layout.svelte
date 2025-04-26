@@ -1,18 +1,20 @@
 <script lang="ts">
+    import { page } from '$app/state';
 	import '../app.css';
 
 	let { children } = $props();
+    const isRootPath = $derived(page.url.pathname === '/');
 </script>
 
-<div class="flex flex-row">
-<header class="flex basis-1/3 flex-col px-12 py-4">
+<div class="flex flex-col md:flex-row">
+<header class={`px-12 py-4 md:flex md:flex-col md:basis-1/3 ${isRootPath ? 'basis-full'  : 'hidden '}`}>
     <div class=" grid grid-cols-3"> 
         <a class="text-center text-blue-500" href="/about">About</a>
         <a class="text-center text-blue-500" href="/readings">Readings</a>
         <a class="text-center text-blue-500" href="/info">Info</a>
     </div>
     <h1 class="text-center text-4xl font-bold mb-4 mt-8">Jacob</h1>
-    <input class="h-8 border" type="text" placeholder="Search posts"/>
+    <input class="h-8 border w-full" type="text" placeholder="Search posts"/>
     <div class="my-4">
         <a href="creating-a-personal-website" class="font-semibold">Creating a personal website</a>
         <br/>
@@ -33,7 +35,7 @@
     </div>
 </header>
 
-<main class="basis-2/3 p-12">
+<main class={`p-12 md:basis-2/3 ${isRootPath ? 'hidden ' : 'basis-full '}`}>
     {@render children()}
 </main>
 </div>
