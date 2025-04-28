@@ -1,0 +1,8 @@
+---
+name: "Creating a personal website"
+tags: ["technology", "terminology", "computers"]
+date: "2025-04-26"
+description: "It really should be"
+published: true
+---
+webstie

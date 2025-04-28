@@ -1,0 +1,8 @@
+---
+name: "Please just call it a computer"
+tags: ["technology", "terminology", "computers"]
+date: "2025-04-26"
+description: "It really should be"
+published: true
+---
+i agree with this sentiment
