@@ -5,6 +5,38 @@
 	let { children } = $props();
     const isRootPath = $derived(page.url.pathname === '/');
 
+interface PostMetadata {
+    title: string;
+    summary: string;
+    date: string; 
+    tags: string[]; 
+  }
+
+  interface Post {
+    slug: string;
+    metadata: PostMetadata;
+  }
+
+  const postModules = import.meta.glob<{ metadata: PostMetadata }>(
+    '../posts/*.svx',
+    { eager: true }
+  );
+
+  const posts: Post[] = Object.keys(postModules).map((path) => {
+    const slug = path.split('/').pop()?.replace('.svx', '') ?? '';
+    return {
+      slug,
+      metadata: postModules[path].metadata || { title: 'Untitled' }
+    };
+  });
+
+  posts.sort((a, b) => {
+    if (a.metadata.date && b.metadata.date) {
+      return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+    }
+    return a.metadata.title.localeCompare(b.metadata.title);
+  });
+    console.log('Loaded posts:', posts);
 </script>
 
 <div class="flex flex-col md:flex-row h-screen">
@@ -17,22 +49,19 @@
     <h1 class="text-center text-4xl font-bold my-4 underline"><a href="/" >Jacob's Website</a></h1>
     <input class="h-8 border w-full pl-2" type="text" placeholder="Search posts (this does not currently work)"/>
     <div class="overflow-y-auto">
-        <div class="my-4">
-            <a href="/Creating_a_personal_website" class="font-semibold underline">Creating a personal website</a>
-            <br/>
-            <span class="text-sm ">It took a surprising amount of time to create this website. Mostly because I refused to seriously do it. Debating styling, debating the technical details...</span>
-        </div>
-        <div class="my-4">
-            <a href="/Periods_should_be_outside_of_quotes" class="font-semibold underline">Periods should be outside of quotes</a>
-            <br/>
-            <span class="text-sm ">Quotes are meant to scope the words which are being said. The period ends the scope of the sentence I am writing. If I end my sentence on a quote...</span>
-        </div>
-        <div class="my-4">
-            <a href="/Please_just_call_it_a_computer" class="font-semibold underline">Please just call it a computer</a>
-            <br/>
-            <span class="text-sm ">I recently got swapped to an infrastructure role at my job, which means I need to learn AWS because that's the proprietary system my job decided to...</span>
-        </div>
-
+        {#each posts as { slug, metadata }}
+            <div class="my-4">
+                <a href={`/${slug}`} class="font-semibold underline">{metadata.title}</a>
+                <br />
+                <span class="text-sm">{metadata.summary}</span>
+                <br />
+                <div class="flex flex-row">
+                    {#each metadata.tags as tag}
+                        <span class="text-sm mr-2">{tag}</span>
+                    {/each}
+                </div>
+            </div>
+        {/each}
     </div>
 </header>
 <div class="w-full h-full flex flex-col">

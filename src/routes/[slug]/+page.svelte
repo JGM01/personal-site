@@ -5,8 +5,6 @@
 
     let postModules = import.meta.glob('../../posts/*.svx', { eager: false });
 
-    console.log('Available post modules:', Object.keys(postModules));
-    
     let post = $derived(
         postModules[`../../posts/${slug}.svx`]?.().catch((err) => {
             console.error('Failed to load post:', err);
@@ -14,9 +12,6 @@
         })
     );
 
-    $effect(() => {
-        console.log('Current slug:', slug);
-    });
 </script>
 
 {#await post}

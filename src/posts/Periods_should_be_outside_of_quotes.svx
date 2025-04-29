@@ -1,8 +1,8 @@
 ---
-name: "Periods should be outside of quotes"
+title: "Periods should be outside of quotes"
 tags: ["technology", "terminology", "computers"]
 date: "2025-04-26"
-description: "It really should be"
+summary: "It really should be"
 published: true
 ---
 quotes
