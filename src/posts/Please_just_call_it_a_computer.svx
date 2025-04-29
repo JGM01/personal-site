@@ -1,8 +1,8 @@
 ---
 title: "Please just call it a computer"
-tags: ["technology", "terminology", "computers"]
+tags: ["discussion", "AWS", "terminology"]
 date: "2025-04-26"
-summary: "It really should be"
+summary: "I recently got swapped into an infrastructure role at work, which means I need to learn AWS."
 published: true
 ---
 i agree with this sentiment

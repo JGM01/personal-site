@@ -1,8 +1,8 @@
 ---
 title: "Creating a personal website"
-tags: ["technology", "terminology", "computers"]
+tags: ["explanation", "svelte", "systems"]
 date: "2025-04-26"
-summary: "It really should be"
+summary: "Long-winded explanation for the why/how/etc of making this fairly basic website."
 published: true
 ---
 <div class="flex flex-col max-w-4xl ">
