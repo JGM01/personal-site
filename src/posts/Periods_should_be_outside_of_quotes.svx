@@ -1,6 +1,5 @@
 ---
 title: "Periods should be outside of quotes"
-tags: ["discussion", "grammar", "language"]
 date: "2025-04-26"
 summary: "Respect the end-of-scope token that is the period."
 published: true

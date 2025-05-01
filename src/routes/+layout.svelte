@@ -9,7 +9,6 @@
         title: string;
         summary: string;
         date: string; 
-        tags: string[]; 
     }
 
     interface Post {
@@ -43,11 +42,9 @@
         const lowerSearch = search.toLowerCase();
         return posts.filter(post =>
             post.metadata.title.toLowerCase().includes(lowerSearch) ||
-            post.metadata.summary.toLowerCase().includes(lowerSearch) ||
-            post.metadata.tags.some(tag => tag.toLowerCase().includes(lowerSearch))
+            post.metadata.summary.toLowerCase().includes(lowerSearch)
         );
     }
-
 
     const filteredPosts = $derived(filterPosts(sortedPosts, searchTerm));
 </script>
@@ -67,12 +64,6 @@
                 <a href={`/${slug}`} class="font-semibold underline">{metadata.title}</a>
                 <br />
                 <span class="text-sm">{metadata.summary}</span>
-                <br />
-                <div class="flex flex-row">
-                    {#each metadata.tags as tag}
-                        <span class="text-sm mr-2 text-yellow-600">#{tag}</span>
-                    {/each}
-                </div>
             </div>
         {/each}
     </div>

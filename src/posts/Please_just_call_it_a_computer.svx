@@ -1,6 +1,5 @@
 ---
 title: "Please just call it a computer"
-tags: ["discussion", "AWS", "terminology"]
 date: "2025-04-26"
 summary: "I recently got swapped into an infrastructure role at work, which means I need to learn AWS."
 published: true
