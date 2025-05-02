@@ -70,7 +70,7 @@
 </header>
 <div class="w-full h-full flex flex-col">
 
-<main class={`p-12 max-w-4xl mx-auto flex-1 overflow-y-auto ${isRootPath ? 'hidden ' : 'basis-full '}`}>
+<main class={`p-12 pb-64 max-w-4xl mx-auto flex-1 overflow-y-auto ${isRootPath ? 'hidden ' : 'basis-full '}`}>
     <a href="/" class="md:hidden text-left text-xl font-bold underline">Home</a>
     {@render children()}
 </main>
