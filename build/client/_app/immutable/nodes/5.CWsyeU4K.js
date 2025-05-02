@@ -1,2 +1,0 @@
-import{t as e,a}from"../chunks/F52fom8h.js";import"../chunks/CQ3UEqnz.js";var s=e(`<div class="flex flex-col"><h1 class="m-auto text-4xl font-bold ">Readings</h1> <p class="my-4">I like to save blog posts, books, and youtube videos to learn from on the subway to-and-from work. Highly recommend! This page is just a list of a bunch that I have/haven't worked through. 
-    Might end up forcing myself to write short reviews or something so that I understand the details better.</p></div>`);function n(t){var o=s();a(t,o)}export{n as component};

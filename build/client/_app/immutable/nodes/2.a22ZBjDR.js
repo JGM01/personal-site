@@ -1,1 +1,0 @@
-import{t,a as r}from"../chunks/F52fom8h.js";import"../chunks/CQ3UEqnz.js";var l=t('<img src="/Trollface.png" alt="troll face" class="min-w-3xl min-h-3xl">');function e(a){var o=l();r(a,o)}export{e as component};
