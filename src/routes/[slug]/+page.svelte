@@ -20,7 +20,12 @@
     {#if module && module.default}
         <svelte:component this={module.default} />
     {:else}
-        <p>Post not found for slug: {slug}</p>
+        <h1 class="m-auto text-6xl font-bold">404</h1>
+        <p class="indent-4 md:indent-8 text-lg/6 md:text-xl/8 my-8"> 
+            There is no post named <i>"{slug}"</i>, perhaps try the search bar?
+            <br/>
+            <a href="/">Back to Home</a>
+        </p>
     {/if}
         {:catch error}
     <p>Error loading post: {error.message}</p>
