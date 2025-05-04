@@ -1,0 +1,37 @@
+---
+title: "Man holding lightning"
+date: "2025-03-28"
+summary: "I really wanted to draw a portrayal of something fantastical."
+published: true
+---
+
+<script>
+import Video from '$lib/components/Video.svelte';
+import Image from '$lib/components/Image.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
+</script>
+
+<h1 class="m-auto text-4xl font-bold">{title}</h1>
+
+<p class="mx-auto">{date}</p>
+
+<Image imagePath="/lightning_hold.png"/>
+
+<Paragraph>
+Inspired partially from how the warhammer titan conjures up weapons from nothing in Attack on Titan, I tried to demonstrate a bit more color and chaos than what would be found in the anime or manga.
+Also, just recently an episode of One Piece released (I do not watch One Piece) where Luffy fights Kizaru and there are some cool light-focused sakuga moments that I appreciated. I really like when
+light, lightning, and other brightly-styled attacks are portrayed rainbow-y. 
+</Paragraph>
+
+<Image imagePath="/lightning_hold_corrections.png" />
+<Paragraph>
+The true sin of this piece is the blur on the actual body of the person. Ends up making the entire work look low-res and foggy. The lighting consistency is a bit of an issue as well, but nothing too bad. I just
+forgot that the tops of his knuckles going into the back of his hand would probably cast a shadow, and that his bicep, shoulder, and traps probably should catch some light since they're in line-of-sight with the beam.
+</Paragraph>
+<Video videoPath="/lightning_hold_timelapse.mp4"/>
+
+<Paragraph>
+The timelapse just demonstrates the workflow. Nothing crazy, but you can see where it all goes wrong like 5 seconds before the end. Overall, I think I did really good on the perspective and anatomy, just need to remember
+to chill out on post-processing.
+</Paragraph>
+

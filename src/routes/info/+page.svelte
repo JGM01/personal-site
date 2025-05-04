@@ -1,9 +1,12 @@
-<div class="flex flex-col max-w-4xl ">
-<h1 class="m-auto text-4xl font-bold ">Info</h1>
-<div class="flex justify-center my-8  ">
+<script lang="ts">
+import Paragraph from '$lib/components/Paragraph.svelte';
+</script>
 
-<table class="min-w-lg max-w-2xl align-center"> 
-  <caption class="font-bold">Dell Optiplex 390 Desktop</caption>
+<h1 class="m-auto text-4xl font-bold ">Info</h1>
+
+<div class="flex justify-center my-8  ">
+<table class="md:min-w-lg max-w-2xl align-center"> 
+  <caption class="font-bold">Dell Optiplex 390</caption>
   <tbody>
     <tr>
       <td class="border-b">CPU</td>
@@ -33,13 +36,13 @@
 </table>
 </div>
 
-<p class="indent-4 md:indent-8 text-lg/6 md:text-xl/8 my-8">
-This website is being served by the Dell Optiplex 390. It wont be forever though, since I got this computer from my friend (and then I moved) and I really do want to return it.
-I'm hoping that subsequent PC upgrades or scavenging for parts from friends who are doing upgrades can produce a new server.
-</p>
+<Paragraph>
+This website is being served by the Dell Optiplex 390. It wont be forever though, as I got it from my friend and I'd really like to return it.
+I'm hoping that a new server can be built out of no-longer-used parts from a PC upgrade.
+</Paragraph>
 <div class="flex justify-center my-8">
 
-<table class="min-w-lg max-w-2xl align-center"> 
+<table class="md:min-w-lg max-w-2xl align-center"> 
   <caption class="font-bold">Macbook Pro</caption>
   <tbody>
     <tr>
@@ -77,9 +80,9 @@ I'm hoping that subsequent PC upgrades or scavenging for parts from friends who 
   </tbody>
 </table>
 </div>
-<p class="indent-4 md:indent-8 text-lg/6 md:text-xl/8 my-8">
-99.99% of all the computer tasks I do are on this laptop. I got it as a college graduation gift from my parents/grandparents about a year ago and 
-it's been the best investment of all time. What more can you need? Not windows, 99% of unix commands work, can just ssh into optiplex for seriously linux-y stuff.
-Unbeatable.
-</p>
-</div>
+<Paragraph>
+This laptop handles 99.99% of all the computer tasks I do regularly. It was my college graduation gift from my parents/grandparents and 
+it's been the best investment of all time. The screen, audio, and performance are all really good. In all fairness though, the M1 Air also would have been 
+good too and only cost like $600. My justification is that it was refurbished, making it around ~$1000 cheaper than it sold for new. The biggest downside
+is MacOS. Configurability, DirectX/Vulkan/OpenGL, GDB, all these things either are non-functional or so wack that I don't even try. 
+</Paragraph>

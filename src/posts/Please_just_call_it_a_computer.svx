@@ -2,6 +2,6 @@
 title: "Please just call it a computer"
 date: "2025-04-26"
 summary: "I recently got swapped into an infrastructure role at work, which means I need to learn AWS."
-published: true
+published: false 
 ---
 i agree with this sentiment
